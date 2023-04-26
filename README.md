@@ -3,11 +3,12 @@
 ### NOTES
 - Wajib menjalankan `npm install` .
 - Wajib menjalankan `json-server --watch db.json --port 5000`.
-- Kalian bisa menambahkan metode `DELETE` atau `EDIT` pada program ini.
+- Kalian bisa menambahkan metode`EDIT` pada program ini.
 
 ### FEATURES
 - Metode `GET` untuk menampilkan data
 - Metode `POST` untuk menambah data
+- Metode `DELETE` untuk menghapus data
 - Menambahkan data berdasarkan `ID`
 
 ### Description

@@ -6,10 +6,11 @@ import {
   Th,
   Thead,
   Tr,
-  Text
+  Text,
+  Button
 } from '@chakra-ui/react';
 
-const AbsensiTable = ({ absensiData }) => {
+const AbsensiTable = ({ absensiData, onDelete }) => {
   return (
     
     <Table>
@@ -30,6 +31,15 @@ const AbsensiTable = ({ absensiData }) => {
             <Td>{absensi.nama}</Td>
             <Td>{absensi.nim}</Td>
             <Td>{absensi.prodi}</Td>
+            <Td>
+              <Button
+                colorScheme='red'
+                ml={2}
+                onClick={() => onDelete(absensi.id)}
+              >
+                Delete
+              </Button>
+            </Td>
           </Tr>
         ))}
       </Tbody>

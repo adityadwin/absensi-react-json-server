@@ -26,11 +26,26 @@ const App = () => {
         setAbsensiData([...absensiData, data]);
       });
   };
+  // Fungsi untuk menghapus data absensi
+  const handleDeleteAbsensi = (absensiId) => {
+    fetch(`http://localhost:5000/absensi/${absensiId}`, {
+      method: 'DELETE',
+    })
+      .then(() => {
+        const updatedData = absensiData.filter(
+          (absensi) => absensi.id !== absensiId
+        );
+        setAbsensiData(updatedData);
+      });
+  };
 
   return (
     <div>
       <AbsensiForm onAdd={handleAddAbsensi} />
-      <AbsensiTable absensiData={absensiData} />
+      <AbsensiTable
+        absensiData={absensiData}
+        onDelete={handleDeleteAbsensi}
+      />
     </div>
   );
 };
