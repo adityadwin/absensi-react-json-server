@@ -26,6 +26,7 @@ const App = () => {
         setAbsensiData([...absensiData, data]);
       });
   };
+  
   // Fungsi untuk menghapus data absensi
   const handleDeleteAbsensi = (absensiId) => {
     fetch(`http://localhost:5000/absensi/${absensiId}`, {
